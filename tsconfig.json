@@ -17,7 +17,8 @@
     "paths": { "@/*": ["src/*"] },
     "esModuleInterop": true,
     "types": ["node", "express", "jest", "bcryptjs"],
-    "skipLibCheck": false
+    "skipLibCheck": false,
+    "typeRoots": ["src/types/sessions.d.ts"]
   },
   "include": ["./src", ".eslintrc.js"],
   "exclude": ["node_modules", "./dist", "./src/__tests__"]
