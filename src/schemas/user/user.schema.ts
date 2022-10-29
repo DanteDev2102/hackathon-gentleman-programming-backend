@@ -9,3 +9,7 @@ export const RegisterUserSchema = z
     message: "Passwords don't match",
     path: ['passwordConfirm']
   });
+
+export const LoginUserSchema = z.object({
+  body: z.object({ email, password }).strict()
+});
