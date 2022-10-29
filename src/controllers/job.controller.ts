@@ -3,8 +3,7 @@ import axios, { AxiosPromise } from 'axios';
 
 export const getJobsPerPage = async (req: Request, res: Response) => {
   try {
-    const { page } = req.params;
-    const { category } = req.body;
+    const { page, category } = req.body;
     const jobsPerPage = await axios.get<AxiosPromise>(
       `https://www.getonbrd.com/api/v0/categories/${category}/jobs?per_page=10&page=${page}&expand=["company"]`
     );

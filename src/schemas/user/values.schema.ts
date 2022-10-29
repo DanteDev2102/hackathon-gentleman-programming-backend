@@ -1,12 +1,20 @@
 import { z } from 'zod';
 
-export const username = z
+export const firstName = z
   .string({
-    required_error: 'username is required',
-    invalid_type_error: 'username must be a string'
+    required_error: 'firstName is required',
+    invalid_type_error: 'firstName must be a string'
   })
-  .min(4, { message: 'username min is 4 characters' })
-  .max(25, { message: 'username max is 25 characters' });
+  .min(4, { message: 'firstName min is 4 characters' })
+  .max(25, { message: 'firstName max is 25 characters' });
+
+export const lastName = z
+  .string({
+    required_error: 'lastName is required',
+    invalid_type_error: 'lastName must be a string'
+  })
+  .min(4, { message: 'lastName min is 4 characters' })
+  .max(25, { message: 'lastName max is 25 characters' });
 
 export const password = z
   .string({
@@ -15,6 +23,11 @@ export const password = z
   })
   .min(6, { message: 'short password, min 6 characters' })
   .max(32, { message: 'very long password, max 32 characters' });
+
+export const passwordConfirm = z.string({
+  required_error: 'password confirmation is required',
+  invalid_type_error: 'password confirmation must be a string'
+});
 
 export const email = z
   .string({
