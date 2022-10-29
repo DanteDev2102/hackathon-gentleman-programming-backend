@@ -6,3 +6,9 @@ export class EmailAlreadyExistsError extends AppError {
     super(message, { code: 400, type: APP_ERRORS.REPEATED_EMAIL });
   }
 }
+
+export class InvalidUserData extends AppError {
+  constructor(message: string = 'Datos inválidos') {
+    super(message, { code: 400, type: APP_ERRORS.INVALID_USER_DATA });
+  }
+}
