@@ -1,3 +1,3 @@
 export * from './connect.db';
-export * from './index';
+export * from './schemas/user.schema';
 export * from './types';
