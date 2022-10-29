@@ -14,9 +14,7 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "noFallthroughCasesInSwitch": true,
-    "paths": {
-      "@/*": ["src/*"]
-    },
+    "paths": { "@/*": ["src/*"] },
     "esModuleInterop": true,
     "types": ["node", "express", "jest", "bcryptjs"],
     "skipLibCheck": false
