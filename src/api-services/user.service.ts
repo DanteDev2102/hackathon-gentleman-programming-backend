@@ -1,4 +1,4 @@
-import { CreateNewUser } from '../database';
+/* 
 import { hash } from 'bcryptjs';
 import { FormatUserData } from '../adapters';
 import { IUser } from '../database';
@@ -9,3 +9,4 @@ export const CreateUserService = async (dataNewUser: IUser): Promise<any> => {
   const formatedUser = await FormatUserData(newUser);
   return { data: { ...formatedUser } };
 };
+ */
