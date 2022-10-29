@@ -2,7 +2,7 @@ import { AnyZodObject, ZodEffects, ZodError } from 'zod';
 import { Request, Response, NextFunction } from 'express';
 
 export const validateSchema =
-  (schema: ZodEffects<AnyZodObject>) =>
+  (schema: ZodEffects<AnyZodObject> | AnyZodObject) =>
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       await schema.parseAsync({ body: req.body, query: req.query, headers: req.headers, params: req.params });
