@@ -1,4 +1,4 @@
-import 'dotenv/config'
+import 'dotenv/config';
 
 const config = {
   // server configs
@@ -8,9 +8,11 @@ const config = {
 
   // db config
 
-  mongoURI: process.env.MONGO_URI ?? 'mongodb://localhost:27017/test',
-  userDB: process.env.MONGO_USER ?? '',
-  passDB: process.env.MONGO_PASSWORD ?? ''
-}
+  DB_HOST: process.env.DB_HOST ?? 'localhost',
+  DB_PORT: process.env.DB_PORT ?? 5432,
+  DB_NAME: process.env.DB_name ?? 'hackaton',
+  DB_USER: process.env.DB_USER ?? 'postgres',
+  DB_PASSWORD: process.env.DB_PASSWORD ?? 'postgres'
+};
 
-export default config
+export default config;
