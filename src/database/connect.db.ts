@@ -1,14 +1,12 @@
-import mongoose from 'mongoose';
+import { Sequelize } from 'sequelize';
 import config from '../config';
 
-mongoose.Promise = global.Promise;
+const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT } = config;
 
-export const connectDB = async (URI: string) => {
-  try {
-    await mongoose.connect(URI, { user: config.userDB, pass: config.passDB });
-    console.log('[db] connected success');
-  } catch (error) {
-    console.error('[db] error:', error);
-    process.exit(1);
-  }
-};
+export const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
+  host: DB_HOST,
+  port: DB_PORT as number,
+  dialect: 'postgres',
+  logging: false,
+  native: false
+});
