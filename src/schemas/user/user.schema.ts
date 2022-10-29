@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { email, password, firstName, lastName, passwordConfirm } from './values.schema';
 
-export const CreateUserSchema = z
+export const RegisterUserSchema = z
   .object({
     body: z.object({ firstName, lastName, password, passwordConfirm, email }).strict()
   })

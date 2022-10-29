@@ -1,14 +1,11 @@
-import { CreateUserSchema } from '../../schemas/user/user.schema';
+import { RegisterUserSchema } from '../../schemas/user/user.schema';
 import { validateSchema } from '../../middlewares';
 import { IRouter, Router } from 'express';
-import { CreateUserParams } from './user.routes.type';
+import { getUsers, registerUser } from '../../controllers';
 
 const userRoutes: IRouter = Router();
 
-userRoutes.post('/register', validateSchema(CreateUserSchema), async (req, res) => {
-  const user: CreateUserParams = req.body;
-  console.log(user);
-  res.send('user register');
-});
+userRoutes.get('/', getUsers);
+userRoutes.post('/register', validateSchema(RegisterUserSchema), registerUser);
 
 export default userRoutes;

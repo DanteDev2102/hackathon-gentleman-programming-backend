@@ -4,7 +4,8 @@ import { sequelize } from '../connect.db';
 export const UserSchema = sequelize.define('User', {
   id: {
     primaryKey: true,
-    type: DataTypes.UUID
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4
   },
   email: {
     type: DataTypes.STRING,
