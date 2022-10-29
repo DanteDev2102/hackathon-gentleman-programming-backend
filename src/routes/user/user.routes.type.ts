@@ -5,3 +5,8 @@ export interface CreateUserParams {
   firstName: string;
   lastName: string;
 }
+
+export interface UserLoginParams {
+  email: string;
+  password: string;
+}
