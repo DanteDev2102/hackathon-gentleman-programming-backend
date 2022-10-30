@@ -4,7 +4,7 @@ import config from '../../config';
 import { SearchParamsSchema } from '../../schemas/api';
 import { API_ENDPOINTS } from './apiEndpoints';
 
-export const searchJobs = async (req: Request, res: Response) => {
+export const getSearchJobs = async (req: Request, res: Response) => {
   try {
     const { query } = req;
     SearchParamsSchema.parse(query);
