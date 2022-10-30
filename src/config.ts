@@ -15,7 +15,9 @@ const config = {
   DB_PASSWORD: process.env.DB_PASSWORD ?? 'postgres',
 
   // get On Board public Api
-  API_BASE_URL: 'https://www.getonbrd.com/api/v0'
+  API_BASE_URL: 'https://www.getonbrd.com/api/v0',
+  // JWT
+  JWT_TOKEN: process.env.JWT_TOKEN ?? 'secret'
 };
 
 export default config;

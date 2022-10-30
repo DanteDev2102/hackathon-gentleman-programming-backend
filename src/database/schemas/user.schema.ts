@@ -1,7 +1,8 @@
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../connect.db';
+import { IUserInstance } from '../types';
 
-export const UserSchema = sequelize.define('User', {
+export const UserSchema = sequelize.define<IUserInstance>('User', {
   id: {
     primaryKey: true,
     type: DataTypes.UUID,

@@ -4,7 +4,7 @@ import { sequelize } from './database';
 
 export async function runServer() {
   try {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
     console.log('All models were synchronized successfully.');
     await sequelize.authenticate();
     console.log('Connection Database has been established successfully.');
