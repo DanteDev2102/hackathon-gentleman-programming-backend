@@ -12,7 +12,10 @@ const config = {
   DB_PORT: process.env.DB_PORT ?? 5432,
   DB_NAME: process.env.DB_name ?? 'hackaton',
   DB_USER: process.env.DB_USER ?? 'postgres',
-  DB_PASSWORD: process.env.DB_PASSWORD ?? 'postgres'
+  DB_PASSWORD: process.env.DB_PASSWORD ?? 'postgres',
+
+  // get On Board public Api
+  API_BASE_URL: 'https://www.getonbrd.com/api/v0'
 };
 
 export default config;

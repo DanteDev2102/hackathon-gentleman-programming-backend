@@ -1,3 +1,3 @@
 export * from './index';
-export * from './job.types';
+export * from './api.types';
 export * from './user.type';
