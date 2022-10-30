@@ -19,5 +19,8 @@ export const UserSchema = sequelize.define('User', {
   },
   lastName: {
     type: DataTypes.STRING
+  },
+  seniority: {
+    type: DataTypes.STRING
   }
 });

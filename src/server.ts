@@ -5,8 +5,9 @@ import { sequelize } from './database';
 export async function runServer() {
   try {
     await sequelize.sync({ force: true });
+    console.log('All models were synchronized successfully.');
     await sequelize.authenticate();
-    console.log('Connection has been established successfully.');
+    console.log('Connection Database has been established successfully.');
     app.listen(config.portServer, () => {
       console.log(`server listening on ${config.hostServer}:${config.portServer}`);
       console.log('kill server press ctrl + c');

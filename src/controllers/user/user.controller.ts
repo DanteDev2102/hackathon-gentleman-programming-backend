@@ -7,7 +7,7 @@ import { EmailAlreadyExistsError } from './user.controller.errors';
 
 export const registerUser = async (req: Request, res: Response) => {
   try {
-    const { email, firstName, lastName, password }: CreateUserParams = req.body;
+    const { email, firstName, lastName, password, seniority }: CreateUserParams = req.body;
     const emailAlreadyExists = await UserSchema.findOne({
       where: {
         email
@@ -20,7 +20,8 @@ export const registerUser = async (req: Request, res: Response) => {
       email,
       firstName,
       lastName,
-      password: await hash(password, 10)
+      password: await hash(password, 10),
+      seniority
     });
     res.json(User);
   } catch (error) {

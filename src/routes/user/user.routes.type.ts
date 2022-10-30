@@ -4,4 +4,5 @@ export interface CreateUserParams {
   passwordConfirm: string;
   firstName: string;
   lastName: string;
+  seniority: string;
 }

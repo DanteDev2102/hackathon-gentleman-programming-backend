@@ -34,7 +34,7 @@ export const SearchParamsSchema = z
     query: z.string().optional(),
     expand: z.array(z.string()).optional(),
     country_code: z.string().optional(),
-    remote: z.boolean().optional()
+    remote: z.string().optional()
   })
   .merge(BaseParamsSchema);
 

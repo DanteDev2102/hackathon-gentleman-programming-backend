@@ -3,7 +3,16 @@ import { email, password, firstName, lastName, passwordConfirm } from './values.
 
 export const RegisterUserSchema = z
   .object({
-    body: z.object({ firstName, lastName, password, passwordConfirm, email }).strict()
+    body: z
+      .object({
+        firstName,
+        lastName,
+        password,
+        passwordConfirm,
+        email,
+        seniority: z.string()
+      })
+      .strict()
   })
   .refine(({ body }) => body.password === body.passwordConfirm, {
     message: "Passwords don't match",
